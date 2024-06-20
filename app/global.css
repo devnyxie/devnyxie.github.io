@@ -61,10 +61,23 @@ a:hover {
   text-decoration: underline;
 }
 
+[data-theme="dark"] a {
+  color: var(--link-color-dark);
+}
+[data-theme="dark"] a:hover {
+  color: var(--link-color-dark-hover);
+}
+
 /* hr */
 hr {
   border: 0;
   border-top: 1px solid #c2c2c2;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+[data-theme="dark"] hr {
+  border: 0;
+  border-top: 1px solid #292929;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
 }
@@ -75,21 +88,6 @@ hr {
     --sh-identifier: white;
     --sh-keyword: #f47067;
     --sh-string: #0fa295;
-  }
-  pre {
-    background-color: rgb(29, 31, 36);
-  }
-  a {
-    color: var(--link-color-dark);
-  }
-  a:hover {
-    color: var(--link-color-dark-hover);
-  }
-  hr {
-    border: 0;
-    border-top: 1px solid #292929;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
   }
 }
 

@@ -3,6 +3,10 @@ code {
   font-family: var(--font-geist-mono), monospace;
 }
 
+pre {
+  background-color: rgb(29, 31, 36);
+}
+
 .prose .anchor {
   margin-left: -1em;
   padding-right: 0.5em;
