@@ -10,22 +10,29 @@ export default function Page() {
   ];
   return (
     <section>
-      <h1 className="mb-8 text-2xl font-semibold tracking-tighter">About</h1>
-      <div className="mb-4">
-        <Image
-          src={pfp}
-          alt="Profile Picture"
-          width={300}
-          height={300}
-          className="mb-2"
-        />
-        <p>
-          About I'm Tim, a passionate Software Developer skilled in both
-          Frontend and Backend development. I'm fluent in English, Greek,
-          Russian, and Polish.
-        </p>
-        <p>Skilled in TypeScript, Ruby, Python and Go.</p>
-        <div className="mt-3">
+      <div>
+        <div className="d-flex justify-content-between align-items-center mb-4">
+          <div>
+            <h1>Tim Afanasiev</h1>
+            <p>Full Stack Software Engineer</p>
+            <p>Go, TypeScript, Ruby, Python</p>
+          </div>
+
+          <Image
+            src={pfp}
+            alt="Profile Picture"
+            width={150}
+            height={150}
+            priority={true}
+            quality={100}
+            style={{ borderRadius: "2px" }}
+          />
+        </div>
+        <h3 className="mb-2">About</h3>
+        <p>Enthusiastic Software Developer with a passion for open-source.</p>
+        <p>Fluent in English, Greek, Russian, and Polish.</p>
+        <hr />
+        <div>
           <p>Official collaborator at:</p>
           <ul style={{ paddingLeft: "2rem" }}>
             {repos.map((repo) => (
