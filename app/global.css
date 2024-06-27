@@ -40,7 +40,6 @@ body {
   color: var(--text-light);
   background-color: var(--bg-light);
   font-family: "Lato", sans-serif;
-  /* font-family: var(--font-geist-sans); */
 }
 
 [data-theme="dark"],

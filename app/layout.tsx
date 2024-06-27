@@ -1,16 +1,11 @@
 import "ress";
-//import from node_modules/modern-normalize/modern-normalize.css
-// import "modern-normalize";
 import "./classes.css";
 import "./global.css";
 import "./blog.css";
 
 import type { Metadata } from "next";
-import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import { Navbar } from "./components/nav/nav";
-import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import Footer from "./components/footer/footer";
 import { baseUrl } from "./sitemap";
 import { ThemeProvider } from "next-themes";
@@ -54,7 +49,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cx(GeistSans.variable, GeistMono.variable)}
+      className={cx(GeistMono.variable)}
       suppressHydrationWarning
     >
       <body>
@@ -64,8 +59,6 @@ export default function RootLayout({
             <hr style={{ margin: 0 }} />
             {children}
             <Footer />
-            <Analytics />
-            <SpeedInsights />
           </main>
         </ThemeProvider>
       </body>
