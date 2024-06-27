@@ -1,0 +1,134 @@
+pre,
+code {
+  font-family: var(--font-geist-mono), monospace;
+}
+
+pre {
+  background-color: rgb(29, 31, 36);
+}
+
+.prose .anchor {
+  margin-left: -1em;
+  padding-right: 0.5em;
+  width: 80%;
+  max-width: 700px;
+  cursor: pointer;
+}
+
+.prose > :first-child {
+  margin-top: 1.25em !important;
+  margin-bottom: 1.25em !important;
+}
+
+pre::-webkit-scrollbar {
+  display: none;
+}
+
+.prose .anchor {
+  position: absolute;
+  visibility: hidden;
+  text-decoration: none;
+  margin-left: -1em;
+  padding-right: 0.5em;
+  width: 80%;
+  max-width: 700px;
+  cursor: pointer;
+}
+
+.anchor:hover {
+  visibility: visible;
+}
+
+.prose a {
+  text-decoration: underline;
+  transition: all 0.2s;
+  text-underline-offset: 2px;
+  color: var(--decoration-neutral-400);
+}
+
+.prose .anchor::after {
+  content: "#";
+  opacity: 0.5;
+}
+
+.prose *:hover > .anchor {
+  visibility: visible;
+}
+
+.prose pre {
+  border-radius: var(--border-radius);
+  overflow-x: auto;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+}
+
+.prose code {
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--border-radius);
+}
+
+.prose pre code {
+  padding: 0;
+  border: initial;
+  line-height: 1.5;
+}
+
+.prose code span {
+  font-weight: 500;
+}
+
+.prose img {
+  margin: 0;
+}
+
+.prose p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: var(--text-neutral-800);
+}
+
+.prose h1 {
+  font-size: 2.25rem;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.prose h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.prose h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.prose h4 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.prose strong {
+  font-weight: 500;
+}
+
+.prose ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.prose ol {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+}

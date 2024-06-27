@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
 ::selection {
   background-color: #47a3f3;
@@ -6,6 +6,9 @@
 }
 
 :root {
+  /*general*/
+  --border-radius: 3px;
+  /*code highlighting*/
   --sh-class: #2d5e9d;
   --sh-identifier: #354150;
   --sh-sign: #8996a3;
@@ -15,6 +18,67 @@
   --sh-jsxliterals: #6266d1;
   --sh-property: #e25a1c;
   --sh-entity: #e25a1c;
+  /* theming */
+  --bg-light: #f9f9f9;
+  --bg-light-active: #e6e6e6;
+  --text-light: #21262c;
+  --bg-dark: #1a1a1a;
+  --bg-dark-active: #2a2a2a;
+  --text-dark: #d3d3d3;
+  --link-color-light: #007f7a;
+  --link-color-light-hover: #005f5a;
+  --link-color-dark: #47a3f3;
+  --link-color-dark-hover: #2d5e9d;
+}
+
+html {
+  min-width: 360px;
+}
+
+html,
+body {
+  color: var(--text-light);
+  background-color: var(--bg-light);
+  font-family: "Lato", sans-serif;
+}
+
+[data-theme="dark"],
+[data-theme="dark"] body {
+  color-scheme: dark;
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+/*Links styling*/
+a {
+  color: var(--link-color-light);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--link-color-light-hover);
+  text-decoration: underline;
+}
+
+[data-theme="dark"] a {
+  color: var(--link-color-dark);
+}
+[data-theme="dark"] a:hover {
+  color: var(--link-color-dark-hover);
+}
+
+/* hr */
+hr {
+  border: 0;
+  border-top: 1px solid #c2c2c2;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+[data-theme="dark"] hr {
+  border: 0;
+  border-top: 1px solid #292929;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,115 +88,36 @@
     --sh-keyword: #f47067;
     --sh-string: #0fa295;
   }
-  html {
-    color-scheme: dark;
+}
+
+main {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 1rem;
+}
+
+/* Tablets: Adjusting width to 80% */
+@media (min-width: 768px) and (max-width: 1024px) {
+  main {
+    width: 80%;
+    max-width: 80%;
+    margin: 0 auto;
   }
 }
 
-html {
-  min-width: 360px;
-}
-
-.prose .anchor {
-  @apply absolute invisible no-underline;
-
-  margin-left: -1em;
-  padding-right: 0.5em;
-  width: 80%;
-  max-width: 700px;
-  cursor: pointer;
-}
-
-.anchor:hover {
-  @apply visible;
-}
-
-.prose a {
-  @apply underline transition-all decoration-neutral-400 dark:decoration-neutral-600 underline-offset-2 decoration-[0.1em];
-}
-
-.prose .anchor:after {
-  @apply text-neutral-300 dark:text-neutral-700;
-  content: '#';
-}
-
-.prose *:hover > .anchor {
-  @apply visible;
-}
-
-.prose pre {
-  @apply bg-neutral-50 dark:bg-neutral-900 rounded-lg overflow-x-auto border border-neutral-200 dark:border-neutral-900 py-2 px-3 text-sm;
-}
-
-.prose code {
-  @apply px-1 py-0.5 rounded-lg;
-}
-
-.prose pre code {
-  @apply p-0;
-  border: initial;
-  line-height: 1.5;
-}
-
-.prose code span {
-  @apply font-medium;
-}
-
-.prose img {
-  /* Don't apply styles to next/image */
-  @apply m-0;
-}
-
-.prose p {
-  @apply my-4 text-neutral-800 dark:text-neutral-200;
-}
-
-.prose h1 {
-  @apply text-4xl font-medium tracking-tight mt-6 mb-2;
-}
-
-.prose h2 {
-  @apply text-xl font-medium tracking-tight mt-6 mb-2;
-}
-
-.prose h3 {
-  @apply text-xl font-medium tracking-tight mt-6 mb-2;
-}
-
-.prose h4 {
-  @apply text-lg font-medium tracking-tight mt-6 mb-2;
-}
-
-.prose strong {
-  @apply font-medium;
-}
-
-.prose ul {
-  @apply list-disc pl-6;
-}
-
-.prose ol {
-  @apply list-decimal pl-6;
-}
-
-.prose > :first-child {
-  /* Override removing top margin, causing layout shift */
-  margin-top: 1.25em !important;
-  margin-bottom: 1.25em !important;
-}
-
-pre::-webkit-scrollbar {
-  display: none;
-}
-
-pre {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+/* Desktops: Fixed width of 800px */
+@media (min-width: 1025px) {
+  main {
+    width: 700px;
+    max-width: 700px;
+    margin: 0 auto;
+    /* padding: 0; */
+  }
 }
 
 /* Remove Safari input shadow on mobile */
-input[type='text'],
-input[type='email'] {
+input[type="text"],
+input[type="email"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -147,4 +132,10 @@ table {
 
 .title {
   text-wrap: balance;
+}
+
+/* section */
+section {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
