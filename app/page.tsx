@@ -1,4 +1,3 @@
-import { BlogPosts } from "app/components/posts";
 import Image from "next/image";
 import pfp from "./other/pfp.jpg";
 
@@ -8,6 +7,7 @@ export default function Page() {
     { name: "material-ui", url: "https://github.com/mui/material-ui" },
     { name: "pterm", url: "https://github.com/pterm/pterm" },
   ];
+
   return (
     <section>
       <div>
@@ -31,7 +31,9 @@ export default function Page() {
         <h3 className="mb-2">About</h3>
         <p>Enthusiastic Software Developer with a passion for open-source.</p>
         <p>Fluent in English, Greek, Russian, and Polish.</p>
+
         <hr />
+
         <div>
           <p>Official collaborator at:</p>
           <ul style={{ paddingLeft: "2rem" }}>

@@ -25,8 +25,8 @@
   --bg-dark: #1a1a1a;
   --bg-dark-active: #2a2a2a;
   --text-dark: #d3d3d3;
-  --link-color-light: #007f7a;
-  --link-color-light-hover: #005f5a;
+  --link-color-light: #0e70bb; /* Slightly darker than #47a3f3 */
+  --link-color-light-hover: #224e86; /* Slightly darker than #2d5e9d */
   --link-color-dark: #47a3f3;
   --link-color-dark-hover: #2d5e9d;
 }

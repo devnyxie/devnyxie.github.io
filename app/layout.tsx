@@ -1,7 +1,6 @@
 import "ress";
 import "./classes.css";
 import "./global.css";
-import "./blog.css";
 
 import type { Metadata } from "next";
 import { GeistMono } from "geist/font/mono";
@@ -47,11 +46,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html
-      lang="en"
-      className={cx(GeistMono.variable)}
-      suppressHydrationWarning
-    >
+    <html lang="en" className={cx(GeistMono.variable)} suppressHydrationWarning>
       <body>
         <ThemeProvider>
           <main>
