@@ -29,7 +29,7 @@ export default function Page() {
       name: "getFavicon",
       lang: "Python",
       excerpt:
-        "Simple python package to grab site's favicons. Supports async concurrent bunch loading.",
+        "Simple python package to grab site's favicons. Supports async concurrent batch loading.",
     },
     {
       name: "distro-api",
