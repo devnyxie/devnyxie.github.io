@@ -10,7 +10,7 @@
   --border-radius: 3px;
   /*code highlighting*/
   --sh-class: #2d5e9d;
-  --sh-identifier: #354150;
+  --sh-identifier: var(--text-light);
   --sh-sign: #8996a3;
   --sh-string: #007f7a;
   --sh-keyword: #e02518;
@@ -29,6 +29,24 @@
   --link-color-light-hover: #224e86; /* Slightly darker than #2d5e9d */
   --link-color-dark: #47a3f3;
   --link-color-dark-hover: #2d5e9d;
+}
+
+[data-theme="dark"],
+[data-theme="dark"] :root {
+  --sh-class: #4c97f8;
+  --sh-identifier: var(--text-dark);
+  --sh-keyword: #f47067;
+  --sh-string: #0fa295;
+}
+
+pre {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  background-color: rgb(217, 223, 235);
+}
+
+[data-theme="dark"] pre {
+  background-color: rgb(36, 38, 44);
 }
 
 html {
@@ -80,15 +98,6 @@ hr {
   border-top: 1px solid #292929;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --sh-class: #4c97f8;
-    --sh-identifier: white;
-    --sh-keyword: #f47067;
-    --sh-string: #0fa295;
-  }
 }
 
 main {
