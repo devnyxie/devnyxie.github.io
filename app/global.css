@@ -148,29 +148,3 @@ section {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
 }
-
-/* General select styling */
-select {
-  background-color: var(--bg-light);
-  color: var(--text-light);
-  border-radius: var(--border-radius);
-  padding: 0.5rem;
-  border: 1px solid var(--bg-light-active);
-}
-
-[data-theme="dark"] select {
-  background-color: var(--bg-dark);
-  color: var(--text-dark);
-  border: 1px solid var(--bg-dark-active);
-}
-
-/* Option styling */
-select option {
-  background-color: var(--bg-light);
-  color: var(--text-light);
-}
-
-[data-theme="dark"] select option {
-  background-color: var(--bg-dark);
-  color: var(--text-dark);
-}
