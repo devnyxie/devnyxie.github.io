@@ -1,49 +1,46 @@
 select {
-  -webkit-appearance: none !important;
-  -moz-appearance: none !important;
-  appearance: none !important;
-  background-color: var(--bg-light) !important;
-  color: var(--text-light) !important;
-  border: 1px solid #ccc !important;
-  padding: 0.25em 0.5em !important;
-  border-radius: var(--border-radius) !important;
-  font-size: 14px !important;
-  cursor: pointer !important;
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  border-radius: var(--border-radius);
+  padding: 0.5rem;
+  border: 1px solid var(--bg-light-active);
 }
 
-/* Style options */
-select option {
-  background-color: var(--bg-light) !important;
-  color: var(--text-light) !important;
-  font-size: 1em !important;
-}
-
-/* Hover styles for options */
-select option:hover {
-  background-color: var(--bg-dark) !important;
-  color: var(--text-dark) !important;
-}
-
-/* Hover styles for select */
+/* Hover styling for select */
 select:hover {
-  background-color: var(--bg-light-active) !important;
+  background-color: var(--bg-light-active);
 }
 
-/* Styling for selected option */
-select option:checked {
-  background-color: var(--link-color-light) !important;
-  color: var(--text-light) !important;
+/* Select styling for dark theme */
+[data-theme="dark"] select {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+  border: 1px solid var(--bg-dark-active);
 }
 
-/* dark mode */
-[data-theme="dark"] {
-  select {
-    background-color: var(--bg-dark) !important;
-    color: var(--text-dark) !important;
-    border: 1px solid #333 !important;
-  }
+/* Hover styling for select in dark theme */
+[data-theme="dark"] select:hover {
+  background-color: var(--bg-dark-active);
+}
 
-  select:hover {
-    background-color: var(--bg-dark-active) !important;
-  }
+/* Option styling */
+select option {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+}
+
+/* Hover styling for option */
+select option:hover {
+  background-color: var(--bg-light-active);
+}
+
+/* Option styling for dark theme */
+[data-theme="dark"] select option {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+/* Hover styling for option in dark theme */
+[data-theme="dark"] select option:hover {
+  background-color: var(--bg-dark-active);
 }
