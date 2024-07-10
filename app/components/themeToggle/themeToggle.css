@@ -2,8 +2,10 @@ select {
   background-color: var(--bg-light);
   color: var(--text-light);
   border-radius: var(--border-radius);
-  padding: 0.5rem;
-  border: 1px solid var(--bg-light-active);
+  border: 1px solid #ccc;
+  padding: 0.25em 0.5em;
+  cursor: pointer;
+  font-size: 14px;
 }
 
 /* Hover styling for select */
@@ -15,7 +17,7 @@ select:hover {
 [data-theme="dark"] select {
   background-color: var(--bg-dark);
   color: var(--text-dark);
-  border: 1px solid var(--bg-dark-active);
+  border: 1px solid #333;
 }
 
 /* Hover styling for select in dark theme */
