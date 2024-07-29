@@ -8,6 +8,10 @@ select {
   font-size: 14px;
 }
 
+[data-theme="light"] select {
+  border: 1px solid #ccc;
+}
+
 /* Hover styling for select */
 select:hover {
   background-color: var(--bg-light-active);

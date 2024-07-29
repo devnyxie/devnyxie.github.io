@@ -34,7 +34,6 @@ export default function Footer() {
     <footer className="mb-5">
       <hr />
       <div className="d-flex justify-content-between">
-        {" "}
         <div className="d-flex">
           {links.map((link) => (
             <a
